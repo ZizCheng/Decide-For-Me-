@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>12 &gt; 385 XDDD 8=====D</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Titor has no chance japan is fake XDDD</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -41,9 +45,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>12 &gt; 385 XDDD 8=====D</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Titor has no chance japan is fake XDDD</string>
 </dict>
 </plist>

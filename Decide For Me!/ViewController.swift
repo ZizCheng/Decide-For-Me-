@@ -12,8 +12,11 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
-    let URL_HEROES = "https://api.yelp.com/v3/businesses/search"
+    var latitude = "32.1"
+    var longitude = "-122.58"
         
+    @IBOutlet weak var recommendation: UITextView!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -28,34 +31,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         
-        let RestaurantFinder = RestaurantFinder(lat, long)
-        let restaurant: restaurant = RestaurantFinder.getOne()
-        restaurant.getName
-        restaurant.getImage
-        restaraunt.getLoc
-        
         
         
     }
     
-    func getJsonFromUrl(){
-        let url = URL(string: "https://api.yelp.com/v3/businesses/search")
-        URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
-            guard let data = data, error == nil else { return }
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
-                if let posts = json["error"] as? [String: AnyObject] {
-                    let titor = posts["description"] as? String
-                    print("test")
-                    print(posts)
-                    print(titor)
-                }
-            } catch let error as NSError {
-                print(error)
+    
+    @IBAction func touchButton1(_ sender: Any) {
+        determineMyCurrentLocation()
+        let restaurantfinder = RestaurantFinder(Latitude: latitude, Longitude: longitude)
+        restaurantfinder.getOne(completion: {restaurant in
+            DispatchQueue.main.async {
+                self.recommendation.text =
+                    restaurant.name!
+                    + "\n\(restaurant.price!)"
+                    + "\n\(restaurant.rating!)/5"
             }
-        }).resume()
-        print("done")
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,7 +72,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         let userLocation:CLLocation = locations[0] as CLLocation
         
         // Call stopUpdatingLocation() to stop listening for location updates,
@@ -89,9 +80,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // manager.stopUpdatingLocation()
         
-        print("user latitude = \(userLocation.coordinate.latitude)")
-        print("user longitude = \(userLocation.coordinate.longitude)")
+       print("user latitude = \(userLocation.coordinate.latitude)")
+       print("user longitude = \(userLocation.coordinate.longitude)")
+        self.latitude = "" + "\(userLocation.coordinate.latitude)"
+        self.longitude = "" + "\(userLocation.coordinate.longitude)"
     }
+    
+
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
     {
