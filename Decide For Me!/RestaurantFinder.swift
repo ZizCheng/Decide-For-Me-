@@ -6,6 +6,7 @@
 //  Copyright © 2018 Lifely. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 class RestaurantFinder {
@@ -36,7 +37,7 @@ class RestaurantFinder {
             guard let data = data, error == nil else {return}
             do {
                 let restaurants = try JSONDecoder().decode(Businesses.self, from: data)
-                let randomnum = Int(arc4random_uniform(UInt32(restaurants.businesses.count)))-1
+                let randomnum = Int(arc4random_uniform(UInt32(restaurants.businesses.count)))
                 self.restaurant = restaurants.businesses[randomnum]
                 completion(restaurants.businesses[randomnum])
             } catch let err {
@@ -48,7 +49,6 @@ class RestaurantFinder {
     }
     
     
-    
 }
 
 struct Restaurant: Decodable {
@@ -57,9 +57,38 @@ struct Restaurant: Decodable {
     let rating: Double?
     let price: String?
     let id: String?
+    let phone: String?
+    let display_phone: String?
+    let location: RestaurantLocation
+    
+    func fetchImage(completion: @escaping ((UIImage) -> Void)) {
+        let url = URL(string: self.image_url!)
+        URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
+            
+            do {
+                let image = UIImage(data: data!)
+                completion(image!)
+            }
+            
+        }).resume()
+    }
+    
+    
+    
 }
 
 struct Businesses: Decodable {
     let businesses: [Restaurant]
     let total: Int
+}
+
+struct RestaurantLocation: Decodable {
+    let address1: String?
+    let address2: String?
+    let address3: String?
+    let city: String?
+    let zip_code: String?
+    let country: String?
+    let state: String?
+    let display_address: [String]?
 }
