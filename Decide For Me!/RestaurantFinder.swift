@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  RestaurantFinder.swift
 //  Decide For Me!
 //
 //  Created by Akheron on 4/21/18.

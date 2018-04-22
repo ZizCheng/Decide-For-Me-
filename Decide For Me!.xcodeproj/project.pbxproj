@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		116E0408208C77AA002C5CBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E5AB6208BD1940069294F /* ViewController.swift */; };
+		116E040C208C7821002C5CBB /* RestaurantFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E040B208C7821002C5CBB /* RestaurantFinder.swift */; };
 		846E5AB5208BD1940069294F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E5AB4208BD1940069294F /* AppDelegate.swift */; };
-		846E5AB7208BD1940069294F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E5AB6208BD1940069294F /* ViewController.swift */; };
 		846E5ABA208BD1940069294F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E5AB8208BD1940069294F /* Main.storyboard */; };
 		846E5ABC208BD1940069294F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846E5ABB208BD1940069294F /* Assets.xcassets */; };
 		846E5ABF208BD1940069294F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E5ABD208BD1940069294F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		116E040B208C7821002C5CBB /* RestaurantFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFinder.swift; sourceTree = "<group>"; };
 		846E5AB1208BD1940069294F /* Decide For Me!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Decide For Me!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846E5AB4208BD1940069294F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846E5AB6208BD1940069294F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		116E040D208C782D002C5CBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				116E040B208C7821002C5CBB /* RestaurantFinder.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		846E5AA8208BD1940069294F = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		846E5AB3208BD1940069294F /* Decide For Me! */ = {
 			isa = PBXGroup;
 			children = (
+				116E040D208C782D002C5CBB /* Models */,
 				846E5AB4208BD1940069294F /* AppDelegate.swift */,
 				846E5AB6208BD1940069294F /* ViewController.swift */,
 				846E5AB8208BD1940069294F /* Main.storyboard */,
@@ -90,6 +101,9 @@
 		846E5AA9208BD1940069294F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Lifely;
@@ -136,7 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846E5AB7208BD1940069294F /* ViewController.swift in Sources */,
+				116E040C208C7821002C5CBB /* RestaurantFinder.swift in Sources */,
+				116E0408208C77AA002C5CBB /* ViewController.swift in Sources */,
 				846E5AB5208BD1940069294F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
