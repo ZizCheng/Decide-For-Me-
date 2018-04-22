@@ -24,53 +24,19 @@ class EntryVC: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func request(_ sender: Any)
     {
-        locationManager.delegate = self
-        
         if CLLocationManager.authorizationStatus() == .notDetermined {
             self.locationManager.requestWhenInUseAuthorization()
         }
-        
-        check()
-    }
-    func check()
-    {
+        locationManager.delegate = self
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
         if (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse)
         {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "SVC") as! SuggestionVC
             vc.long = longitude
             vc.lat = latitude
             self.present(vc, animated: false, completion: nil)
-        }
-        else
-        {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "DLVC") as! DeclineLocationVC
-            self.present(vc, animated: false, completion: nil)
-        }
-    }
-    
-    private func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        switch status {
-        case .notDetermined: //NANI
-            locationManager.requestAlwaysAuthorization()
-            break
-        case .authorizedWhenInUse: //GOOD
-            locationManager.distanceFilter = kCLDistanceFilterNone
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-            locationManager.startUpdatingLocation()
-            break
-        case .authorizedAlways: //GOOD
-            locationManager.distanceFilter = kCLDistanceFilterNone
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-            locationManager.startUpdatingLocation()
-            break
-        case .restricted: //BAD
-            break
-        case .denied: //BAD
-            break
-        default:
-            break
         }
     }
     
