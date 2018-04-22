@@ -31,7 +31,7 @@ class RestaurantFinder {
         let url = URL(string: "https://api.yelp.com/v3/businesses/search?text=del&latitude=" + self.Latitude + "&longitude=" + self.Longtitude)
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
-        request.addValue("Bearer vbE9sKBXuhf07aNjLKnMEVuEmQl3wWorOFsORfmfEno04pb4SVoeM78KIMRDd0zkiN1aDAvsYX3Dwit4hLuR9YH9vXXEYvph2vv_eovMWsEziorHQvfOz7RWfVTMWnYx", forHTTPHeaderField: "Authorization")
+        request.addValue("API", forHTTPHeaderField: "Authorization")
         URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else {return}
             do {
