@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		116E0408208C77AA002C5CBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E5AB6208BD1940069294F /* ViewController.swift */; };
+		116E0408208C77AA002C5CBB /* EntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E5AB6208BD1940069294F /* EntryVC.swift */; };
 		116E040C208C7821002C5CBB /* RestaurantFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E040B208C7821002C5CBB /* RestaurantFinder.swift */; };
+		84159466208D08320009E551 /* DeclineLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84159465208D08310009E551 /* DeclineLocationVC.swift */; };
+		84159468208D0B5E0009E551 /* SuggestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84159467208D0B5E0009E551 /* SuggestionVC.swift */; };
 		846E5AB5208BD1940069294F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E5AB4208BD1940069294F /* AppDelegate.swift */; };
 		846E5ABA208BD1940069294F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E5AB8208BD1940069294F /* Main.storyboard */; };
 		846E5ABC208BD1940069294F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846E5ABB208BD1940069294F /* Assets.xcassets */; };
@@ -17,9 +19,11 @@
 
 /* Begin PBXFileReference section */
 		116E040B208C7821002C5CBB /* RestaurantFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFinder.swift; sourceTree = "<group>"; };
+		84159465208D08310009E551 /* DeclineLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclineLocationVC.swift; sourceTree = "<group>"; };
+		84159467208D0B5E0009E551 /* SuggestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionVC.swift; sourceTree = "<group>"; };
 		846E5AB1208BD1940069294F /* Decide For Me!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Decide For Me!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846E5AB4208BD1940069294F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		846E5AB6208BD1940069294F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		846E5AB6208BD1940069294F /* EntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryVC.swift; sourceTree = "<group>"; };
 		846E5AB9208BD1940069294F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		846E5ABB208BD1940069294F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846E5ABE208BD1940069294F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,11 +70,13 @@
 			children = (
 				116E040D208C782D002C5CBB /* Models */,
 				846E5AB4208BD1940069294F /* AppDelegate.swift */,
-				846E5AB6208BD1940069294F /* ViewController.swift */,
+				846E5AB6208BD1940069294F /* EntryVC.swift */,
 				846E5AB8208BD1940069294F /* Main.storyboard */,
 				846E5ABB208BD1940069294F /* Assets.xcassets */,
 				846E5ABD208BD1940069294F /* LaunchScreen.storyboard */,
 				846E5AC0208BD1940069294F /* Info.plist */,
+				84159465208D08310009E551 /* DeclineLocationVC.swift */,
+				84159467208D0B5E0009E551 /* SuggestionVC.swift */,
 			);
 			path = "Decide For Me!";
 			sourceTree = "<group>";
@@ -150,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84159466208D08320009E551 /* DeclineLocationVC.swift in Sources */,
+				84159468208D0B5E0009E551 /* SuggestionVC.swift in Sources */,
 				116E040C208C7821002C5CBB /* RestaurantFinder.swift in Sources */,
-				116E0408208C77AA002C5CBB /* ViewController.swift in Sources */,
+				116E0408208C77AA002C5CBB /* EntryVC.swift in Sources */,
 				846E5AB5208BD1940069294F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
