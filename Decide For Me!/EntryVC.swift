@@ -38,6 +38,15 @@ class EntryVC: UIViewController, CLLocationManagerDelegate {
             vc.lat = latitude
             self.present(vc, animated: false, completion: nil)
         }
+        else
+        {
+            let alert = UIAlertController(title: "You are retarded", message: "go allow location services", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "NANI", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Shit fam my bad", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning() {
