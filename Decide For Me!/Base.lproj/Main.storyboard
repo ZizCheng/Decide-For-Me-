@@ -38,10 +38,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--SuggestionVC-->
+        <!--ChoiceVC-->
         <scene sceneID="7sJ-SD-MDT">
             <objects>
-                <viewController storyboardIdentifier="SVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WJr-4n-Kz3" customClass="SuggestionVC" customModule="Decide_For_Me_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WJr-4n-Kz3" customClass="ChoiceVC" customModule="Decide_For_Me_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KuE-2K-lCR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +53,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovt-3a-PqH">
+                                <rect key="frame" x="124" y="237" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Link to suggestion"/>
+                                <connections>
+                                    <action selector="SuggestionVCClick:" destination="WJr-4n-Kz3" eventType="touchUpInside" id="LTM-QI-LAS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMp-Xs-1iH">
+                                <rect key="frame" x="142" y="304" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Link to tinder"/>
+                                <connections>
+                                    <action selector="TinderVCClick:" destination="WJr-4n-Kz3" eventType="touchUpInside" id="Vv7-mF-4Xv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="E8C-De-Ovd"/>
@@ -60,7 +76,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inI-L8-W08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1402" y="77"/>
+            <point key="canvasLocation" x="1401" y="32"/>
+        </scene>
+        <!--TinderVC-->
+        <scene sceneID="X28-mP-Lh6">
+            <objects>
+                <viewController storyboardIdentifier="TVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5i-dy-1xN" customClass="TinderVC" customModule="Decide_For_Me_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SEr-BW-cAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="o79-Of-u0h"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9iN-LJ-vfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="364"/>
+        </scene>
+        <!--SuggestionVC-->
+        <scene sceneID="uoL-Kz-mTB">
+            <objects>
+                <viewController storyboardIdentifier="SVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="94M-fv-DNG" customClass="SuggestionVC" customModule="Decide_For_Me_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D73-pH-Gj0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7DJ-RJ-GG5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NL6-CW-WHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="-346"/>
         </scene>
     </scenes>
     <resources>

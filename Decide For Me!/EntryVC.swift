@@ -18,22 +18,23 @@ class EntryVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        locationManager.delegate = self
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            self.locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+        }
         
         
     }
     
     @IBAction func request(_ sender: Any)
     {
-        if CLLocationManager.authorizationStatus() == .notDetermined {
-            self.locationManager.requestWhenInUseAuthorization()
-        }
-        locationManager.delegate = self
-        locationManager.distanceFilter = kCLDistanceFilterNone
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
         if (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse)
         {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SVC") as! SuggestionVC
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CVC") as! ChoiceVC
             vc.long = longitude
             vc.lat = latitude
             self.present(vc, animated: false, completion: nil)
