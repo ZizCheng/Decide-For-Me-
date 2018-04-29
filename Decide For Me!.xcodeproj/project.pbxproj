@@ -16,10 +16,12 @@
 		846E5ABF208BD1940069294F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E5ABD208BD1940069294F /* LaunchScreen.storyboard */; };
 		849D83DB2094390500798D87 /* SuggestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D83DA2094390500798D87 /* SuggestionVC.swift */; };
 		849D83DD209439BE00798D87 /* TinderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D83DC209439BE00798D87 /* TinderVC.swift */; };
+		B96BD0D4AE140BA106772AC8 /* Pods_Decide_For_Me_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A7C1116A8AAD14FFF0A266 /* Pods_Decide_For_Me_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		116E040B208C7821002C5CBB /* RestaurantFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFinder.swift; sourceTree = "<group>"; };
+		45849557CD62B66DE2278B7B /* Pods-Decide For Me!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decide For Me!.release.xcconfig"; path = "Pods/Target Support Files/Pods-Decide For Me!/Pods-Decide For Me!.release.xcconfig"; sourceTree = "<group>"; };
 		84159467208D0B5E0009E551 /* ChoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceVC.swift; sourceTree = "<group>"; };
 		846E5AB1208BD1940069294F /* Decide For Me!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Decide For Me!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846E5AB4208BD1940069294F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		846E5AC0208BD1940069294F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849D83DA2094390500798D87 /* SuggestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionVC.swift; sourceTree = "<group>"; };
 		849D83DC209439BE00798D87 /* TinderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderVC.swift; sourceTree = "<group>"; };
+		A9A7C1116A8AAD14FFF0A266 /* Pods_Decide_For_Me_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Decide_For_Me_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB9090D62318979509607773 /* Pods-Decide For Me!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decide For Me!.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Decide For Me!/Pods-Decide For Me!.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96BD0D4AE140BA106772AC8 /* Pods_Decide_For_Me_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,11 +56,21 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		730E41AA8985D33A381B8D3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9A7C1116A8AAD14FFF0A266 /* Pods_Decide_For_Me_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		846E5AA8208BD1940069294F = {
 			isa = PBXGroup;
 			children = (
 				846E5AB3208BD1940069294F /* Decide For Me! */,
 				846E5AB2208BD1940069294F /* Products */,
+				8E7BC824DFA5FCD9559724ED /* Pods */,
+				730E41AA8985D33A381B8D3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +99,15 @@
 			path = "Decide For Me!";
 			sourceTree = "<group>";
 		};
+		8E7BC824DFA5FCD9559724ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB9090D62318979509607773 /* Pods-Decide For Me!.debug.xcconfig */,
+				45849557CD62B66DE2278B7B /* Pods-Decide For Me!.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846E5AC3208BD1940069294F /* Build configuration list for PBXNativeTarget "Decide For Me!" */;
 			buildPhases = (
+				0DF525B3C9807BDA2DC7F804 /* [CP] Check Pods Manifest.lock */,
 				846E5AAD208BD1940069294F /* Sources */,
 				846E5AAE208BD1940069294F /* Frameworks */,
 				846E5AAF208BD1940069294F /* Resources */,
+				60AEA2BBEB83DC69F42BCA0E /* [CP] Embed Pods Frameworks */,
+				7E9F098E9EACC4BE84F452E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,6 +180,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DF525B3C9807BDA2DC7F804 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Decide For Me!-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60AEA2BBEB83DC69F42BCA0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Decide For Me!/Pods-Decide For Me!-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Decide For Me!/Pods-Decide For Me!-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E9F098E9EACC4BE84F452E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Decide For Me!/Pods-Decide For Me!-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		846E5AAD208BD1940069294F /* Sources */ = {
@@ -299,13 +380,14 @@
 		};
 		846E5AC4208BD1940069294F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB9090D62318979509607773 /* Pods-Decide For Me!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93EW688Y3U;
+				DEVELOPMENT_TEAM = U9S4F3FQXA;
 				INFOPLIST_FILE = "Decide For Me!/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Lifely.Decide-For-Me";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lifely.Decide-For-Me-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,13 +396,14 @@
 		};
 		846E5AC5208BD1940069294F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45849557CD62B66DE2278B7B /* Pods-Decide For Me!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93EW688Y3U;
+				DEVELOPMENT_TEAM = U9S4F3FQXA;
 				INFOPLIST_FILE = "Decide For Me!/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Lifely.Decide-For-Me";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lifely.Decide-For-Me-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
