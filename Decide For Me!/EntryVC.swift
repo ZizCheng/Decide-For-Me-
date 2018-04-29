@@ -24,8 +24,8 @@ class EntryVC: UIViewController, CLLocationManagerDelegate {
         
         if CLLocationManager.authorizationStatus() == .notDetermined {
             self.locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
         }
+        locationManager.startUpdatingLocation()
         
         
     }
@@ -34,6 +34,7 @@ class EntryVC: UIViewController, CLLocationManagerDelegate {
     {
         if (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse)
         {
+
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "CVC") as! ChoiceVC
             vc.long = longitude
             vc.lat = latitude

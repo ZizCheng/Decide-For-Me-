@@ -23,4 +23,15 @@ class SuggestionVC: UIViewController
         
         
     }
+    
+    
+    @IBAction func findRestaurant(_ sender: Any) {
+        print(lat)
+        print(long)
+        let finder = RestaurantFinder(Latitude: lat, Longitude: long)
+        finder.getOne(completion: {restaurant in
+            print(restaurant.name)
+        })
+        
+    }
 }
