@@ -12,7 +12,8 @@ import UIKit
 
 class SuggestionVC: UIViewController
 {
-    
+    var lat = "0.0"
+    var long = "0.0"
     override func viewDidLoad()
     {
         //entry point, called when this VC is brought up

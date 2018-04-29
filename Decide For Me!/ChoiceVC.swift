@@ -23,6 +23,8 @@ class ChoiceVC: UIViewController
     @IBAction func SuggestionVCClick(_ sender: Any)
     {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SVC") as! SuggestionVC
+        vc.lat = lat
+        vc.long = long
         self.present(vc, animated: false, completion: nil)
     }
     @IBAction func TinderVCClick(_ sender: Any)
