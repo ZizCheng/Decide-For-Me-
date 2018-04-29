@@ -9,16 +9,18 @@
 /* Begin PBXBuildFile section */
 		116E0408208C77AA002C5CBB /* EntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E5AB6208BD1940069294F /* EntryVC.swift */; };
 		116E040C208C7821002C5CBB /* RestaurantFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E040B208C7821002C5CBB /* RestaurantFinder.swift */; };
-		84159468208D0B5E0009E551 /* SuggestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84159467208D0B5E0009E551 /* SuggestionVC.swift */; };
+		84159468208D0B5E0009E551 /* ChoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84159467208D0B5E0009E551 /* ChoiceVC.swift */; };
 		846E5AB5208BD1940069294F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E5AB4208BD1940069294F /* AppDelegate.swift */; };
 		846E5ABA208BD1940069294F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E5AB8208BD1940069294F /* Main.storyboard */; };
 		846E5ABC208BD1940069294F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846E5ABB208BD1940069294F /* Assets.xcassets */; };
 		846E5ABF208BD1940069294F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E5ABD208BD1940069294F /* LaunchScreen.storyboard */; };
+		849D83DB2094390500798D87 /* SuggestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D83DA2094390500798D87 /* SuggestionVC.swift */; };
+		849D83DD209439BE00798D87 /* TinderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D83DC209439BE00798D87 /* TinderVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		116E040B208C7821002C5CBB /* RestaurantFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFinder.swift; sourceTree = "<group>"; };
-		84159467208D0B5E0009E551 /* SuggestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionVC.swift; sourceTree = "<group>"; };
+		84159467208D0B5E0009E551 /* ChoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceVC.swift; sourceTree = "<group>"; };
 		846E5AB1208BD1940069294F /* Decide For Me!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Decide For Me!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846E5AB4208BD1940069294F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846E5AB6208BD1940069294F /* EntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryVC.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		846E5ABB208BD1940069294F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846E5ABE208BD1940069294F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846E5AC0208BD1940069294F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849D83DA2094390500798D87 /* SuggestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionVC.swift; sourceTree = "<group>"; };
+		849D83DC209439BE00798D87 /* TinderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +77,9 @@
 				846E5ABB208BD1940069294F /* Assets.xcassets */,
 				846E5ABD208BD1940069294F /* LaunchScreen.storyboard */,
 				846E5AC0208BD1940069294F /* Info.plist */,
-				84159467208D0B5E0009E551 /* SuggestionVC.swift */,
+				84159467208D0B5E0009E551 /* ChoiceVC.swift */,
+				849D83DA2094390500798D87 /* SuggestionVC.swift */,
+				849D83DC209439BE00798D87 /* TinderVC.swift */,
 			);
 			path = "Decide For Me!";
 			sourceTree = "<group>";
@@ -153,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84159468208D0B5E0009E551 /* SuggestionVC.swift in Sources */,
+				849D83DD209439BE00798D87 /* TinderVC.swift in Sources */,
+				84159468208D0B5E0009E551 /* ChoiceVC.swift in Sources */,
+				849D83DB2094390500798D87 /* SuggestionVC.swift in Sources */,
 				116E040C208C7821002C5CBB /* RestaurantFinder.swift in Sources */,
 				116E0408208C77AA002C5CBB /* EntryVC.swift in Sources */,
 				846E5AB5208BD1940069294F /* AppDelegate.swift in Sources */,
