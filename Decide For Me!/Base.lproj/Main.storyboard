@@ -50,20 +50,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovt-3a-PqH" customClass="PressableButton" customModule="SwiftyButton">
-                                <rect key="frame" x="102" y="57" width="170" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Link to suggestion"/>
-                                <connections>
-                                    <action selector="SuggestionVCClick:" destination="WJr-4n-Kz3" eventType="touchUpInside" id="LTM-QI-LAS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMp-Xs-1iH" customClass="PressableButton" customModule="SwiftyButton">
-                                <rect key="frame" x="122" y="116" width="130" height="46"/>
+                                <rect key="frame" x="122" y="152" width="130" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Link to tinder"/>
                                 <connections>
                                     <action selector="TinderVCClick:" destination="WJr-4n-Kz3" eventType="touchUpInside" id="Vv7-mF-4Xv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovt-3a-PqH" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="102" y="80" width="170" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Link to suggestion"/>
+                                <connections>
+                                    <action selector="SuggestionVCClick:" destination="WJr-4n-Kz3" eventType="touchUpInside" id="LTM-QI-LAS"/>
                                 </connections>
                             </button>
                         </subviews>

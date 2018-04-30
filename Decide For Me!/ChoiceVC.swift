@@ -8,17 +8,22 @@
 
 import UIKit
 import CoreLocation
+import SwiftyButton
 
 class ChoiceVC: UIViewController
 {
-    @IBOutlet weak var SuggestionVCButton: UIButton!
-    @IBOutlet weak var TinderVCButton: UIButton!
+    @IBOutlet weak var SuggestionVCButton: PressableButton!
+    @IBOutlet weak var TinderVCButton: PressableButton!
     var lat = "0.0"
     var long = "0.0"
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        SuggestionVCButton.cornerRadius = 5
+        TinderVCButton.cornerRadius = 5
+        SuggestionVCButton.shadowHeight = 5
+        TinderVCButton.shadowHeight = 5
         
         print("we made it boys")
     }
