@@ -113,10 +113,17 @@
                                     <action selector="findRestaurant:" destination="94M-fv-DNG" eventType="touchUpInside" id="QEy-oF-mag"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jnn-vG-8fz">
+                                <rect key="frame" x="62" y="67" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7DJ-RJ-GG5"/>
                     </view>
+                    <connections>
+                        <outlet property="restaurantImage" destination="Jnn-vG-8fz" id="6BE-dq-z6c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NL6-CW-WHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

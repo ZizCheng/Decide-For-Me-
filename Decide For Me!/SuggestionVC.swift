@@ -14,6 +14,9 @@ class SuggestionVC: UIViewController
 {
     var lat = "0.0"
     var long = "0.0"
+    
+    @IBOutlet weak var restaurantImage: UIImageView!
+    
     override func viewDidLoad()
     {
         //entry point, called when this VC is brought up
@@ -30,6 +33,9 @@ class SuggestionVC: UIViewController
         print(long)
         let finder = RestaurantFinder(Latitude: lat, Longitude: long)
         finder.getOne(completion: {restaurant in
+            restaurant.fetchImage(completion: {image in
+                self.restaurantImage.image = image
+            })
             print(restaurant.name)
         })
         
