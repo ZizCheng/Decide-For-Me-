@@ -50,23 +50,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ayyy you made it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL2-DU-9bk">
-                                <rect key="frame" x="123" y="275" width="129" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovt-3a-PqH">
-                                <rect key="frame" x="124" y="237" width="126" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovt-3a-PqH" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="102" y="57" width="170" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Link to suggestion"/>
                                 <connections>
                                     <action selector="SuggestionVCClick:" destination="WJr-4n-Kz3" eventType="touchUpInside" id="LTM-QI-LAS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMp-Xs-1iH">
-                                <rect key="frame" x="142" y="304" width="90" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMp-Xs-1iH" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="122" y="116" width="130" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Link to tinder"/>
                                 <connections>
@@ -77,10 +70,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="E8C-De-Ovd"/>
                     </view>
+                    <connections>
+                        <outlet property="SuggestionVCButton" destination="Ovt-3a-PqH" id="UgP-Oq-9Lc"/>
+                        <outlet property="TinderVCButton" destination="mMp-Xs-1iH" id="i0j-tb-vnw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inI-L8-W08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="32"/>
+            <point key="canvasLocation" x="1400.8" y="31.934032983508249"/>
         </scene>
         <!--TinderVC-->
         <scene sceneID="X28-mP-Lh6">

@@ -11,6 +11,8 @@ import CoreLocation
 
 class ChoiceVC: UIViewController
 {
+    @IBOutlet weak var SuggestionVCButton: UIButton!
+    @IBOutlet weak var TinderVCButton: UIButton!
     var lat = "0.0"
     var long = "0.0"
     
