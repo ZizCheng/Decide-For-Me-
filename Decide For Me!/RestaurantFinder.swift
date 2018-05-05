@@ -48,22 +48,28 @@ class RestaurantFinder {
 
     }
     
-    func getMany(completion: @escaping (([Restaurant]) -> Void))
+    func getMany() -> [Restaurant]
     {
         let url = URL(string: "https://api.yelp.com/v3/businesses/search?text=del&latitude=" + self.Latitude + "&longitude=" + self.Longtitude)
+        let semaphore = DispatchSemaphore(value: 0)
+        var dataResponse: Data = Data()
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
         request.addValue("Bearer vbE9sKBXuhf07aNjLKnMEVuEmQl3wWorOFsORfmfEno04pb4SVoeM78KIMRDd0zkiN1aDAvsYX3Dwit4hLuR9YH9vXXEYvph2vv_eovMWsEziorHQvfOz7RWfVTMWnYx", forHTTPHeaderField: "Authorization")
         URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
-            guard let data = data, error == nil else {return}
-            do {
-                let restaurants = try JSONDecoder().decode(Businesses.self, from: data)
-                let ret: [Restaurant] = restaurants.businesses
-                completion(ret)
-            } catch let err {
-                print(err)
-            }
+            guard let data = data, error == nil else { return }
+            dataResponse = data
+            semaphore.signal()
         }).resume()
+        semaphore.wait()
+        do {
+            let restaurants = try JSONDecoder().decode(Businesses.self, from: dataResponse)
+            let ret: [Restaurant] = restaurants.businesses
+            return ret
+        } catch let err {
+            print(err)
+        }
+        return [Restaurant]()
     }
     
     
@@ -119,3 +125,4 @@ struct RestaurantLocation: Decodable {
     let state: String?
     let display_address: [String]?
 }
+

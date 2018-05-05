@@ -13,42 +13,43 @@ import SwiftyButton
 
 class DeciderHelper
 {
-    var RF: RestaurantFinder
-    var resArr = [Restaurant]()
-    var good = [Restaurant]()
-    var undecided = [Restaurant]()
-    var bad = [Restaurant]()
+    private let resFinder: RestaurantFinder
+    private var restaurants: [Restaurant]?
+    private var Preference: [(Restaurant, String)]
     
-    init(RF: RestaurantFinder)
+    init(_ resFinder: RestaurantFinder)
     {
-        self.RF = RF
-        self.RF.getMany(completion: {ret in
-            self.resArr = ret
-        })
-        undecided = resArr
+        self.resFinder = resFinder
+        self.restaurants = resFinder.getMany()
+        self.Preference = []
     }
     
     func liked(index: Int)
     {
-        for r in good {
-            if(r.equals(r: resArr[index]))
-            {
-                return
-            }
-        }
-        
-        //this one isn't in the good list yet, proceed
-        
-        good.append(resArr[index])
-        var i = 0
-        while i < undecided.count
-        {
-            if(undecided[i].equals(r: resArr[index]))
-            {
-                undecided.remove(at: i)
-            }
-            i = 1 + 1
-        }
+        self.Preference.append((restaurants![index], "liked"))
+    }
+    
+    func dislike(index: Int)
+    {
+        self.Preference.append((restaurants![index], "disliked"))
+    }
+    
+    func getLikes() -> [Restaurant] {
+        let likes = Preference
+            .filter({
+                $0.1 == "liked"
+            })
+            .map({ $0.0 })
+        return likes
+    }
+    
+    func getDislikes() -> [Restaurant] {
+        let dislikes = Preference
+            .filter({
+                $0.1 == "disliked"
+            })
+            .map({ $0.0 })
+        return dislikes
     }
 
 }

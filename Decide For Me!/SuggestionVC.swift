@@ -33,15 +33,14 @@ class SuggestionVC: UIViewController
         print(lat)
         print(long)
         let finder = RestaurantFinder(Latitude: lat, Longitude: long)
-        finder.getOne(completion: {restaurant in
-            restaurant.fetchImage(completion: {image in
-                DispatchQueue.main.async {
-                    self.restaurantImage.image = image
-                    print(restaurant.name)
-                    self.nameLabel.text = restaurant.name
-                }
-            })
-            
+        let decider = DeciderHelper(finder)
+        let randomnum = Int(arc4random_uniform(UInt32(decider.restaurants!.count)))
+        let restaurant = decider.restaurants![randomnum]
+        restaurant.fetchImage(completion: {image in
+            DispatchQueue.main.async {
+                self.restaurantImage.image = image
+                self.nameLabel.text = restaurant.name!
+            }
         })
         
     }
