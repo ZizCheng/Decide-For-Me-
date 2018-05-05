@@ -16,6 +16,7 @@ class DeciderHelper
     var RF: RestaurantFinder
     var resArr = [Restaurant]()
     var good = [Restaurant]()
+    var undecided = [Restaurant]()
     var bad = [Restaurant]()
     
     init(RF: RestaurantFinder)
@@ -24,7 +25,7 @@ class DeciderHelper
         self.RF.getMany(completion: {ret in
             self.resArr = ret
         })
-        good = resArr
+        undecided = resArr
     }
     
     func liked(index: Int)
@@ -37,6 +38,17 @@ class DeciderHelper
         }
         
         //this one isn't in the good list yet, proceed
+        
+        good.append(resArr[index])
+        var i = 0
+        while i < undecided.count
+        {
+            if(undecided[i].equals(r: resArr[index]))
+            {
+                undecided.remove(at: i)
+            }
+            i = 1 + 1
+        }
     }
 
 }
