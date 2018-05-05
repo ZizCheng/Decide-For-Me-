@@ -114,17 +114,25 @@
                                 <rect key="frame" x="62" y="67" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaT-l6-Pud">
+                                <rect key="frame" x="62" y="203" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7DJ-RJ-GG5"/>
                     </view>
                     <connections>
+                        <outlet property="nameLabel" destination="NaT-l6-Pud" id="3YY-qk-9KG"/>
                         <outlet property="restaurantImage" destination="Jnn-vG-8fz" id="6BE-dq-z6c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NL6-CW-WHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="-346"/>
+            <point key="canvasLocation" x="2136.8000000000002" y="-346.77661169415296"/>
         </scene>
     </scenes>
     <resources>

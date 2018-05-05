@@ -16,6 +16,7 @@
 		846E5ABF208BD1940069294F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E5ABD208BD1940069294F /* LaunchScreen.storyboard */; };
 		849D83DB2094390500798D87 /* SuggestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D83DA2094390500798D87 /* SuggestionVC.swift */; };
 		849D83DD209439BE00798D87 /* TinderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D83DC209439BE00798D87 /* TinderVC.swift */; };
+		84D836E5209D20A300B465F5 /* DeciderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D836E4209D20A300B465F5 /* DeciderHelper.swift */; };
 		B96BD0D4AE140BA106772AC8 /* Pods_Decide_For_Me_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A7C1116A8AAD14FFF0A266 /* Pods_Decide_For_Me_.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		846E5AC0208BD1940069294F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849D83DA2094390500798D87 /* SuggestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionVC.swift; sourceTree = "<group>"; };
 		849D83DC209439BE00798D87 /* TinderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderVC.swift; sourceTree = "<group>"; };
+		84D836E4209D20A300B465F5 /* DeciderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeciderHelper.swift; sourceTree = "<group>"; };
 		A9A7C1116A8AAD14FFF0A266 /* Pods_Decide_For_Me_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Decide_For_Me_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9090D62318979509607773 /* Pods-Decide For Me!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decide For Me!.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Decide For Me!/Pods-Decide For Me!.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				116E040B208C7821002C5CBB /* RestaurantFinder.swift */,
+				84D836E4209D20A300B465F5 /* DeciderHelper.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849D83DD209439BE00798D87 /* TinderVC.swift in Sources */,
+				84D836E5209D20A300B465F5 /* DeciderHelper.swift in Sources */,
 				84159468208D0B5E0009E551 /* ChoiceVC.swift in Sources */,
 				849D83DB2094390500798D87 /* SuggestionVC.swift in Sources */,
 				116E040C208C7821002C5CBB /* RestaurantFinder.swift in Sources */,

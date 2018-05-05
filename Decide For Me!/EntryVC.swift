@@ -18,6 +18,7 @@ class EntryVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         locationManager.delegate = self
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest

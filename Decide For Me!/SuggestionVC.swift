@@ -12,6 +12,7 @@ import UIKit
 
 class SuggestionVC: UIViewController
 {
+    @IBOutlet weak var nameLabel: UILabel!
     var lat = "0.0"
     var long = "0.0"
     
@@ -34,9 +35,13 @@ class SuggestionVC: UIViewController
         let finder = RestaurantFinder(Latitude: lat, Longitude: long)
         finder.getOne(completion: {restaurant in
             restaurant.fetchImage(completion: {image in
-                self.restaurantImage.image = image
+                DispatchQueue.main.async {
+                    self.restaurantImage.image = image
+                    print(restaurant.name)
+                    self.nameLabel.text = restaurant.name
+                }
             })
-            print(restaurant.name)
+            
         })
         
     }

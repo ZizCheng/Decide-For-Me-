@@ -16,6 +16,7 @@ class ChoiceVC: UIViewController
     @IBOutlet weak var TinderVCButton: PressableButton!
     var lat = "0.0"
     var long = "0.0"
+
     
     override func viewDidLoad()
     {
@@ -24,7 +25,6 @@ class ChoiceVC: UIViewController
         TinderVCButton.cornerRadius = 5
         SuggestionVCButton.shadowHeight = 5
         TinderVCButton.shadowHeight = 5
-        
         print("we made it boys")
     }
     @IBAction func SuggestionVCClick(_ sender: Any)

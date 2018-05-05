@@ -48,6 +48,24 @@ class RestaurantFinder {
 
     }
     
+    func getMany(completion: @escaping (([Restaurant]) -> Void))
+    {
+        let url = URL(string: "https://api.yelp.com/v3/businesses/search?text=del&latitude=" + self.Latitude + "&longitude=" + self.Longtitude)
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        request.addValue("Bearer vbE9sKBXuhf07aNjLKnMEVuEmQl3wWorOFsORfmfEno04pb4SVoeM78KIMRDd0zkiN1aDAvsYX3Dwit4hLuR9YH9vXXEYvph2vv_eovMWsEziorHQvfOz7RWfVTMWnYx", forHTTPHeaderField: "Authorization")
+        URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
+            guard let data = data, error == nil else {return}
+            do {
+                let restaurants = try JSONDecoder().decode(Businesses.self, from: data)
+                let ret: [Restaurant] = restaurants.businesses
+                completion(ret)
+            } catch let err {
+                print(err)
+            }
+        }).resume()
+    }
+    
     
 }
 
@@ -71,6 +89,15 @@ struct Restaurant: Decodable {
             }
             
         }).resume()
+    }
+    
+    func equals(r: Restaurant) -> Bool
+    {
+        if(self.name == r.name && self.id == r.id && self.display_phone == r.display_phone)
+        {
+            return true
+        }
+        return false
     }
     
     
